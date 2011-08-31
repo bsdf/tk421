@@ -1,13 +1,10 @@
 package twit;
-use secrets;
-use warnings;
-use strict;
 
 use base 'Exporter';
+use secrets;
+use Net::Twitter;
 
 our @EXPORT = qw( $nt );
-
-use Net::Twitter;
 
 our $nt = Net::Twitter->new(
     traits              => [qw/API::REST OAuth/],
